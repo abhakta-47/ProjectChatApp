@@ -1,0 +1,5 @@
+simple group chat app
+
+1. write send msg broadcast to all present in group
+2. accent color of each user = first letter of user id
+3. logo = initial
