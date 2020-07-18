@@ -3,13 +3,15 @@ var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
+const PORT = process.env.PORT || 5000;
+
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     res.sendFile('/index.html')
 });
 
-var server = http.listen(8080, () => {
+var server = http.listen(PORT, () => {
     console.log("server started .... 8080")
 })
 
