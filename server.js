@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 var server = http.listen(PORT, () => {
-    console.log("server started at...." + PORT)
+    console.log("server started at....  *. " + PORT)
 })
 
 io.on('connection', function (socket) {
