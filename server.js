@@ -3,7 +3,7 @@ var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.static('public'))
 
@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 var server = http.listen(PORT, () => {
-    console.log("server started .... 8080")
+    console.log("server started at...." + PORT)
 })
 
 io.on('connection', function (socket) {
