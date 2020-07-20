@@ -3,6 +3,8 @@ var userId = prompt("Enter your User Name")
 let txt_ = document.getElementById("ur-msg")
 let chatArea = document.getElementById("chat-area-id")
 
+$(".logo").text(userId[0]);
+
 txt_.addEventListener("keyup", () => {
     if (event.keyCode === 13) {
         event.preventDefault()
@@ -28,5 +30,5 @@ function cout() {
 }
 
 socket.on('recive-msg', (msgObj) => {
-    $("#chat-area-id").append("<div class=\"chat-box other\"><div class=\"info other\"><div class=\"logo\">"+msgObj["user"]+"</div><div class=\"time\"></div></div><p class=\"msg\">"+msgObj["msg"]+"</p></div>")
+    $("#chat-area-id").append("<div class=\"chat-box other\"><div class=\"info other\"><div class=\"logo\">"+msgObj["user"][0]+"</div><div class=\"time\"></div></div><p class=\"msg\">"+msgObj["msg"]+"</p></div>")
 });
