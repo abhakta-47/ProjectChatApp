@@ -98,6 +98,10 @@ header {
 .ur {
     float: right;
     border-bottom-left-radius: 40px;
+
+    .msg {
+        margin-left: 10px;
+    }
 }
 
 .other {
@@ -189,5 +193,9 @@ footer {
 
     .content-container {
         margin: 60px 0;
+
+        .msg-box {
+            width: 85%;
+        }
     }
 }
