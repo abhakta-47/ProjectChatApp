@@ -1,102 +1,115 @@
 * {
-  border: 0;
+  padding: 0;
   margin: 0;
-}
-
-.logo {
-  margin-top: 1vh;
-  margin-left: 1vh;
-  height: 80%;
-  width: 8vh;
-  border-radius: 50%;
-  background-color: white;
-  color: blue;
-  font-size: 2rem;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
 }
 
 header {
-  height: 8vh;
   position: fixed;
-  top: 0px;
-  width: 100%;
-  -webkit-box-shadow: grey 0px 5px 10px;
-          box-shadow: grey 0px 5px 10px;
-}
-
-.content-container {
-  padding-top: 8vh;
+  top: 0;
+  width: 100vw;
+  height: 8vh;
+  background-color: #bcbeb4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: grey 0 5px 10px;
+          box-shadow: grey 0 5px 10px;
+  z-index: 100;
+}
+
+header .userId {
+  color: white;
+}
+
+header .menu {
+  height: 6.4vh;
+  width: 6.4vh;
+}
+
+.content-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  overflow: hidden;
+  margin: 8vh 0;
 }
 
 .content-container .users-list {
   float: left;
   width: 15vw;
+  background-color: #cfd1c9;
   overflow: auto;
 }
 
 .content-container .chat-area {
-  height: 84vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 85vw;
   overflow: auto;
-  margin-bottom: 10vh;
+  margin: 2vh 2vw;
 }
 
-.content-container .chat-area .chat-box {
-  margin: 1rem 2rem;
-  padding: 1rem;
-  width: 60vw;
-  min-height: 8vh;
-  background-color: white;
-  border: blue 1px solid;
-  -webkit-box-shadow: blue 5px 4px 10px;
-          box-shadow: blue 5px 4px 10px;
-}
-
-.content-container .chat-area .other {
-  float: left;
-  border-radius: 0 0 40px 0;
-}
-
-.content-container .chat-area .ur {
-  float: right;
-  border-radius: 0 0 0 40px;
-}
-
-.content-container .chat-area .info {
+.content-container .chat-area .msg-box {
+  min-height: 5rem;
+  width: 60%;
+  border: solid 1px;
+  margin: 7px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: blue;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+
+.content-container .chat-area .msg-box .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 10px;
+  border-bottom: solid 1px grey;
+  width: 80%;
+  background-color: white;
 }
 
-.content-container .chat-area .info .logo {
-  border: blue .15rem solid;
-  border-radius: 50%;
-  padding: .3rem;
-  margin-right: .5rem;
+.content-container .chat-area .msg-box .info .logo {
   height: 4vh;
   width: 4vh;
-  max-width: 20px;
-  max-height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: solid .5vh;
+  -webkit-box-shadow: grey 5px 5px 10px;
+          box-shadow: grey 5px 5px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,58 +118,116 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: bold;
+  font-size: 1rem;
+  margin: 5px;
+  margin-right: 15px;
+}
+
+.ur {
+  float: right;
+  border-bottom-left-radius: 40px;
+}
+
+.other {
+  float: left;
+  border-bottom-right-radius: 40px;
 }
 
 footer {
-  height: 8vh;
-  min-height: 60px;
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
+  height: 8vh;
+  background-color: #bcbeb4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-shadow: grey 0 -5px 10px;
           box-shadow: grey 0 -5px 10px;
+  padding: 5px 15px;
 }
 
-footer .text-area,
 footer #ur-msg {
-  margin-top: 1vh;
   height: 80%;
-  width: 90%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 15px;
   border-radius: 40px;
-  background-color: white;
-}
-
-footer #ur-msg {
-  margin-left: .5rem;
-  margin-right: .5rem;
-  padding: 0 1rem 0 1rem;
+  padding: 5px 15px;
+  resize: none;
+  font-size: 1rem;
+  scrollbar-width: none;
+  -webkit-box-shadow: grey 5px 5px 10px;
+          box-shadow: grey 5px 5px 10px;
 }
 
 footer .send {
-  margin-top: 1vh;
-  margin-right: .5rem;
   height: 80%;
-  border-radius: 50%;
+  width: 9vh;
   background-color: white;
+  border-radius: 40px;
+  -webkit-box-shadow: grey 5px 5px 10px;
+          box-shadow: grey 5px 5px 10px;
 }
 
-.bg-blue {
-  background-color: #02B5EE;
+.logo {
+  height: 6.4vh;
+  width: 6.4vh;
+  background-color: white;
+  border-radius: 50%;
+  border: solid .8vh;
+  -webkit-box-shadow: grey 5px 5px 10px;
+          box-shadow: grey 5px 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.bg-blue-light {
-  background-color: #5DCDF0;
+.bg-green {
+  background-color: #97CC04;
+}
+
+.bg-green-light {
+  background-color: #B2DB40;
+}
+
+.border-green {
+  border-color: #82af06;
 }
 
 @media only screen and (max-width: 600px) {
+  footer {
+    height: 60px;
+    padding: 5px 10px;
+  }
   footer .logo {
     display: none;
+  }
+  footer .send {
+    width: 60px;
+  }
+  header {
+    height: 60px;
+  }
+  header .logo {
+    height: 48px;
+    width: 48px;
+  }
+  .content-container {
+    margin: 60px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,11 @@
 simple group chat app
 
-1. write send msg broadcast to all present in group
-2. accent color of each user = first letter of user id
-3. logo = initial
+1. write send msg broadcast to all present in group   //
+2. accent color of each user = first letter of user id  //
+3. logo = initial   //
+
+1. responsive
+2. join alert   //
+3.. msg-box fine tuning
+4. list of active users
+5. fonts

@@ -15,7 +15,12 @@ var server = http.listen(PORT, () => {
     console.log("server started at....  *. " + PORT)
 })
 
-io.on('connection', function (socket) {
+io.on('connect', function (socket) {
+    socket.on("iAmNew", (userId) => {
+        console.log(" ID: " + userId);
+        socket.broadcast.emit('newUser', userId)
+    });
+    // socket.broadcast.emit("newUser", (socket.id).toString())
     console.log('a user has connected!');
     socket.on('disconnect', function () {
         console.log('user disconnected');
@@ -25,19 +30,3 @@ io.on('connection', function (socket) {
         socket.broadcast.emit('recive-msg', msg);
     });
 });
-
-
-
-
-// io.on(‘connection’, function (socket) {
-//     console.log(‘a user has connected!’);
-
-//     socket.on(‘disconnect’, function () {
-//         console.log(‘user disconnected’);
-//     });
-
-
-//     socket.on(‘upvote - event’, function (upvote_flag) {
-//         console.log(‘upvote: ‘+upvote_flag);
-//     });
-// });
