@@ -233,7 +233,7 @@ footer .send {
   .content-container {
     margin: 60px 0;
   }
-  .content-container .msg-box {
+  .content-container .chat-area .msg-box {
     width: 85%;
   }
 }
