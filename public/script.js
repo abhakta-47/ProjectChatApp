@@ -1,7 +1,10 @@
 var socket = io();
 var userId = prompt("Enter your User Name")
 userId = ((userId === '') ? "Anonymous" : userId);
-socket.emit("iAmNew", userId);
+socket.emit("iAmNew", {
+    "userId": userId,
+    "roomId": roomId
+});
 let txt_ = document.getElementById("ur-msg")
 let chatArea = document.getElementById("chat-area-id")
 
